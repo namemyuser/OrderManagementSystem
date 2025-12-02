@@ -1,0 +1,12 @@
+[
+  { "id": "U1",  "name": "Kilogram", "abbreviation": "kg" },
+  { "id": "U2",  "name": "Liter",    "abbreviation": "l" },
+  { "id": "U3",  "name": "Piece",    "abbreviation": "pc" },
+  { "id": "U4",  "name": "Meter",    "abbreviation": "m" },
+  { "id": "U5",  "name": "Box",      "abbreviation": "box" },
+  { "id": "U6",  "name": "Pack",     "abbreviation": "pack" },
+  { "id": "U7",  "name": "Hour",     "abbreviation": "h" },
+  { "id": "U8",  "name": "Day",      "abbreviation": "d" },
+  { "id": "U9",  "name": "Week",     "abbreviation": "wk" },
+  { "id": "U10", "name": "Month",    "abbreviation": "mo" }
+]

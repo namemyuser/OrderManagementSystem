@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Add Order Line</title></head>
+<body>
+<h2>Add new Order Line</h2>
+<form th:action="@{/orderlines}" method="post">
+    ID: <input type="text" name="id" /><br/>
+    Product ID: <input type="text" name="product" /><br/>
+    Unit ID: <input type="text" name="unit" /><br/>
+    Quantity: <input type="number" step="any" name="quantity" /><br/>
+    <button type="submit">Add</button>
+</form>
+<a th:href="@{/orderlines}">Back to list</a>
+</body>
+</html>

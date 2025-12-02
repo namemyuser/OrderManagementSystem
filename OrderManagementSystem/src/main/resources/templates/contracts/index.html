@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Contracts</title></head>
+<body>
+<h2>Contracts</h2>
+<table>
+    <tr><th>ID</th><th>Name</th><th>Status</th><th>Delete</th></tr>
+    <tr th:each="contract : ${contracts}">
+        <td th:text="${contract.id}"></td>
+        <td th:text="${contract.name}"></td>
+        <td th:text="${contract.status}"></td>
+        <td>
+            <form th:action="@{'/contracts/' + ${contract.id} + '/delete'}" method="post">
+                <button type="submit">Delete</button>
+            </form>
+        </td>
+    </tr>
+</table>
+<a th:href="@{/contracts/new}">Add Contract</a>
+</body>
+</html>

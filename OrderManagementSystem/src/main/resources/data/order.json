@@ -1,0 +1,111 @@
+[ {
+  "id" : "1",
+  "product" : "Apple",
+  "unit" : "kg",
+  "quantity" : 10,
+  "customer" : {
+    "id" : "101",
+    "name" : "John Doe",
+    "currency" : "USD"
+  }
+}, {
+  "id" : "2",
+  "product" : "Banana",
+  "unit" : "kg",
+  "quantity" : 5,
+  "customer" : {
+    "id" : "102",
+    "name" : "Jane Smith",
+    "currency" : "EUR"
+  }
+}, {
+  "id" : "3",
+  "product" : "Orange",
+  "unit" : "kg",
+  "quantity" : 8,
+  "customer" : {
+    "id" : "103",
+    "name" : "Alice Brown",
+    "currency" : "USD"
+  }
+}, {
+  "id" : "4",
+  "product" : "Milk",
+  "unit" : "liter",
+  "quantity" : 12,
+  "customer" : {
+    "id" : "104",
+    "name" : "Bob Green",
+    "currency" : "CHF"
+  }
+}, {
+  "id" : "5",
+  "product" : "Bread",
+  "unit" : "piece",
+  "quantity" : 20,
+  "customer" : {
+    "id" : "105",
+    "name" : "Charlie White",
+    "currency" : "USD"
+  }
+}, {
+  "id" : "6",
+  "product" : "Tomato",
+  "unit" : "kg",
+  "quantity" : 6,
+  "customer" : {
+    "id" : "106",
+    "name" : "Diana Black",
+    "currency" : "EUR"
+  }
+}, {
+  "id" : "7",
+  "product" : "Potato",
+  "unit" : "kg",
+  "quantity" : 25,
+  "customer" : {
+    "id" : "107",
+    "name" : "Edward Gray",
+    "currency" : "GBP"
+  }
+}, {
+  "id" : "8",
+  "product" : "Cheese",
+  "unit" : "kg",
+  "quantity" : 4,
+  "customer" : {
+    "id" : "108",
+    "name" : "Fiona Blue",
+    "currency" : "USD"
+  }
+}, {
+  "id" : "9",
+  "product" : "Eggs",
+  "unit" : "piece",
+  "quantity" : 30,
+  "customer" : {
+    "id" : "109",
+    "name" : "George Yellow",
+    "currency" : "EUR"
+  }
+}, {
+  "id" : "10",
+  "product" : "Rice",
+  "unit" : "kg",
+  "quantity" : 15,
+  "customer" : {
+    "id" : "110",
+    "name" : "Helen Violet",
+    "currency" : "USD"
+  }
+}, {
+  "id" : "11",
+  "product" : "brinza",
+  "unit" : "kg",
+  "quantity" : 4,
+  "customer" : {
+    "id" : "101",
+    "name" : "John Doe",
+    "currency" : "USD"
+  }
+} ]

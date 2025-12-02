@@ -1,0 +1,9 @@
+[ {
+  "id" : "101",
+  "name" : "Laptop",
+  "status" : "Active"
+}, {
+  "id" : "102",
+  "name" : "Mouse",
+  "status" : "Active"
+} ]

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Service Items</title></head>
+<body>
+<h2>Service Items</h2>
+<table>
+    <tr><th>ID</th><th>Name</th><th>Description</th><th>Delete</th></tr>
+    <tr th:each="serviceitem : ${serviceitems}">
+        <td th:text="${serviceitem.id}"></td>
+        <td th:text="${serviceitem.name}"></td>
+        <td th:text="${serviceitem.description}"></td>
+        <td>
+            <form th:action="@{'/serviceitems/' + ${serviceitem.id} + '/delete'}" method="post">
+                <button type="submit">Delete</button>
+            </form>
+        </td>
+    </tr>
+</table>
+<a th:href="@{/serviceitems/new}">Add Service Item</a>
+</body>
+</html>

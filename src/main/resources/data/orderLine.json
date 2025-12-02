@@ -1,0 +1,14 @@
+[ {
+  "id" : "OL1",
+  "product" : {
+    "id" : "101",
+    "name" : "Laptop",
+    "status" : "Active"
+  },
+  "unit" : {
+    "id" : "U1",
+    "name" : "Piece",
+    "abbreviation" : "pc"
+  },
+  "quantity" : 2.0
+} ]

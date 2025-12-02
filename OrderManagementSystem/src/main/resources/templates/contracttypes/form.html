@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Add Contract Type</title></head>
+<body>
+<h2>Add new Contract Type</h2>
+<form th:action="@{/contracttypes}" method="post">
+    ID: <input type="text" name="id" /><br/>
+    Name: <input type="text" name="name" /><br/>
+    Type: <input type="text" name="type" /><br/>
+    <button type="submit">Add</button>
+</form>
+<a th:href="@{/contracttypes}">Back to list</a>
+</body>
+</html>

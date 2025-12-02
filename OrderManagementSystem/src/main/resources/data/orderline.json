@@ -1,0 +1,62 @@
+[
+  {
+    "id": "OL1",
+    "product": { "id": "P1", "name": "Apple" },
+    "unit": { "id": "U1", "name": "kg" },
+    "quantity": 10.0
+  },
+  {
+    "id": "OL2",
+    "product": { "id": "P2", "name": "Banana" },
+    "unit": { "id": "U1", "name": "kg" },
+    "quantity": 5.0
+  },
+  {
+    "id": "OL3",
+    "product": { "id": "P3", "name": "Orange" },
+    "unit": { "id": "U1", "name": "kg" },
+    "quantity": 8.0
+  },
+  {
+    "id": "OL4",
+    "product": { "id": "P4", "name": "Milk" },
+    "unit": { "id": "U2", "name": "liter" },
+    "quantity": 12.0
+  },
+  {
+    "id": "OL5",
+    "product": { "id": "P5", "name": "Bread" },
+    "unit": { "id": "U3", "name": "piece" },
+    "quantity": 20.0
+  },
+  {
+    "id": "OL6",
+    "product": { "id": "P6", "name": "Tomato" },
+    "unit": { "id": "U1", "name": "kg" },
+    "quantity": 6.0
+  },
+  {
+    "id": "OL7",
+    "product": { "id": "P7", "name": "Potato" },
+    "unit": { "id": "U1", "name": "kg" },
+    "quantity": 25.0
+  },
+  {
+    "id": "OL8",
+    "product": { "id": "P8", "name": "Cheese" },
+    "unit": { "id": "U1", "name": "kg" },
+    "quantity": 4.0
+  },
+  {
+    "id": "OL9",
+    "product": { "id": "P9", "name": "Eggs" },
+    "unit": { "id": "U3", "name": "piece" },
+    "quantity": 30.0
+  },
+  {
+    "id": "OL10",
+    "product": { "id": "P10", "name": "Rice" },
+    "unit": { "id": "U1", "name": "kg" },
+    "quantity": 15.0
+  }
+]
