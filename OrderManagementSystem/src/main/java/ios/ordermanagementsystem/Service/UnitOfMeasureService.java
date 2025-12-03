@@ -14,5 +14,5 @@ public class UnitOfMeasureService {
     public void addUnit(UnitOfMeasure unit) { repository.save(unit); }
     public UnitOfMeasure getUnit(String id) { return repository.findById(id); }
     public List<UnitOfMeasure> getAllUnits() { return repository.findAll(); }
-    public void removeUnit(String id) { repository.delete(id); }
+    public void removeUnit(String id) { repository.deleteById(id); }
 }

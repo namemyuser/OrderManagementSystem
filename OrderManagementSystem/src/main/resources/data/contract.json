@@ -1,72 +1,101 @@
-[
-  {
-    "id": "1",
-    "name": "Standard Supply Contract",
-    "contractType": { "id": "CT1", "name": "STANDARD" },
-    "status": "ACTIVE",
-    "contractLines": []
+[ {
+  "id" : "1",
+  "name" : "Standard Supply Contract",
+  "contractType" : {
+    "id" : "CT1",
+    "name" : "STANDARD",
+    "type" : null
   },
-  {
-    "id": "2",
-    "name": "Premium Service Contract",
-    "contractType": { "id": "CT2", "name": "PREMIUM" },
-    "status": "ACTIVE",
-    "contractLines": []
+  "status" : "ACTIVE",
+  "contractLines" : [ ]
+}, {
+  "id" : "2",
+  "name" : "Premium Service Contract",
+  "contractType" : {
+    "id" : "CT2",
+    "name" : "PREMIUM",
+    "type" : null
   },
-  {
-    "id": "3",
-    "name": "Trial Contract",
-    "contractType": { "id": "CT1", "name": "STANDARD" },
-    "status": "PENDING",
-    "contractLines": []
+  "status" : "ACTIVE",
+  "contractLines" : [ ]
+}, {
+  "id" : "3",
+  "name" : "Trial Contract",
+  "contractType" : {
+    "id" : "CT1",
+    "name" : "STANDARD",
+    "type" : null
   },
-  {
-    "id": "4",
-    "name": "Maintenance Contract 2025",
-    "contractType": { "id": "CT3", "name": "MAINTENANCE" },
-    "status": "ACTIVE",
-    "contractLines": []
+  "status" : "PENDING",
+  "contractLines" : [ ]
+}, {
+  "id" : "4",
+  "name" : "Maintenance Contract 2025",
+  "contractType" : {
+    "id" : "CT3",
+    "name" : "MAINTENANCE",
+    "type" : null
   },
-  {
-    "id": "5",
-    "name": "Support Contract Bronze",
-    "contractType": { "id": "CT4", "name": "SUPPORT" },
-    "status": "ACTIVE",
-    "contractLines": []
+  "status" : "ACTIVE",
+  "contractLines" : [ ]
+}, {
+  "id" : "5",
+  "name" : "Support Contract Bronze",
+  "contractType" : {
+    "id" : "CT4",
+    "name" : "SUPPORT",
+    "type" : null
   },
-  {
-    "id": "6",
-    "name": "Support Contract Silver",
-    "contractType": { "id": "CT4", "name": "SUPPORT" },
-    "status": "ACTIVE",
-    "contractLines": []
+  "status" : "ACTIVE",
+  "contractLines" : [ ]
+}, {
+  "id" : "6",
+  "name" : "Support Contract Silver",
+  "contractType" : {
+    "id" : "CT4",
+    "name" : "SUPPORT",
+    "type" : null
   },
-  {
-    "id": "7",
-    "name": "Support Contract Gold",
-    "contractType": { "id": "CT4", "name": "SUPPORT" },
-    "status": "SUSPENDED",
-    "contractLines": []
+  "status" : "ACTIVE",
+  "contractLines" : [ ]
+}, {
+  "id" : "7",
+  "name" : "Support Contract Gold",
+  "contractType" : {
+    "id" : "CT4",
+    "name" : "SUPPORT",
+    "type" : null
   },
-  {
-    "id": "8",
-    "name": "One‑time Project Contract",
-    "contractType": { "id": "CT5", "name": "PROJECT" },
-    "status": "ACTIVE",
-    "contractLines": []
+  "status" : "SUSPENDED",
+  "contractLines" : [ ]
+}, {
+  "id" : "8",
+  "name" : "One‑time Project Contract",
+  "contractType" : {
+    "id" : "CT5",
+    "name" : "PROJECT",
+    "type" : null
   },
-  {
-    "id": "9",
-    "name": "Long‑term Framework Contract",
-    "contractType": { "id": "CT1", "name": "STANDARD" },
-    "status": "ACTIVE",
-    "contractLines": []
+  "status" : "ACTIVE",
+  "contractLines" : [ ]
+}, {
+  "id" : "9",
+  "name" : "Long‑term Framework Contract",
+  "contractType" : {
+    "id" : "CT1",
+    "name" : "STANDARD",
+    "type" : null
   },
-  {
-    "id": "10",
-    "name": "Expired Contract Sample",
-    "contractType": { "id": "CT2", "name": "PREMIUM" },
-    "status": "EXPIRED",
-    "contractLines": []
-  }
-]
+  "status" : "ACTIVE",
+  "contractLines" : [ ]
+}, {
+  "id" : "10",
+  "name" : "Expired Contract Sample",
+  "contractType" : {
+    "id" : "CT2",
+    "name" : "PREMIUM",
+    "type" : null
+  },
+  "status" : "EXPIRED",
+  "contractLines" : [ ]
+} ]

@@ -13,6 +13,6 @@ public class ContractLineService {
     public void addContractLine(ContractLine contractLine) { repository.save(contractLine); }
     public ContractLine getContractLine(String id) { return repository.findById(id); }
     public List<ContractLine> getAllContractLines() { return repository.findAll(); }
-    public void removeContractLine(String id) { repository.delete(id); }
+    public void removeContractLine(String id) { repository.deleteById(id); }
 
 }
