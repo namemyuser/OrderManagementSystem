@@ -1,15 +1,46 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head><title>Add Order Line</title></head>
+<head>
+    <title>Add Order Line</title>
+    <meta charset="UTF-8">
+</head>
 <body>
 <h2>Add new Order Line</h2>
+
 <form th:action="@{/orderlines}" method="post">
-    ID: <input type="text" name="id" /><br/>
-    Product ID: <input type="text" name="product" /><br/>
-    Unit ID: <input type="text" name="unit" /><br/>
-    Quantity: <input type="number" step="any" name="quantity" /><br/>
+    Order:
+    <select name="orderId" required>
+        <option value="" disabled selected>Select order</option>
+        <option th:each="o : ${orders}"
+                th:value="${o.id}"
+                th:text="${o.id + ' - ' + (o.customer != null ? o.customer.name : '')}">
+        </option>
+    </select><br/>
+
+    Product:
+    <select name="productId" required>
+        <option value="" disabled selected>Select product</option>
+        <option th:each="p : ${products}"
+                th:value="${p.id}"
+                th:text="${p.name}">
+        </option>
+    </select><br/>
+
+    Unit:
+    <select name="unitId" required>
+        <option value="" disabled selected>Select unit</option>
+        <option th:each="u : ${units}"
+                th:value="${u.id}"
+                th:text="${u.name}">
+        </option>
+    </select><br/>
+
+    Quantity:
+    <input type="number" step="any" name="quantity" min="1" required/><br/>
+
     <button type="submit">Add</button>
 </form>
+
 <a th:href="@{/orderlines}">Back to list</a>
 </body>
 </html>

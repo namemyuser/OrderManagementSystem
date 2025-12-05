@@ -1,22 +1,35 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head><title>Order Lines</title></head>
+<head>
+    <title>Order Lines</title>
+    <meta charset="UTF-8">
+</head>
 <body>
 <h2>Order Lines</h2>
-<table>
-    <tr><th>ID</th><th>Product</th><th>Unit</th><th>Quantity</th><th>Delete</th></tr>
-    <tr th:each="orderline : ${orderlines}">
-        <td th:text="${orderline.id}"></td>
-        <td th:text="${orderline.product != null ? orderline.product.name : ''}"></td>
-        <td th:text="${orderline.unit != null ? orderline.unit.name : ''}"></td>
-        <td th:text="${orderline.quantity}"></td>
+
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Order</th>
+        <th>Product</th>
+        <th>Unit</th>
+        <th>Quantity</th>
+        <th>Delete</th>
+    </tr>
+    <tr th:each="ol : ${orderlines}">
+        <td th:text="${ol.id}"></td>
+        <td th:text="${ol.order != null ? ol.order.id : ''}"></td>
+        <td th:text="${ol.product != null ? ol.product.name : ''}"></td>
+        <td th:text="${ol.unit != null ? ol.unit.name : ''}"></td>
+        <td th:text="${ol.quantity}"></td>
         <td>
-            <form th:action="@{'/orderlines/' + ${orderline.id} + '/delete'}" method="post">
+            <form th:action="@{'/orderlines/' + ${ol.id} + '/delete'}" method="post">
                 <button type="submit">Delete</button>
             </form>
         </td>
     </tr>
 </table>
+
 <a th:href="@{/orderlines/new}">Add Order Line</a>
 </body>
 </html>

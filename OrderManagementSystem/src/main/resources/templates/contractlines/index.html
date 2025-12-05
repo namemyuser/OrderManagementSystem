@@ -2,27 +2,36 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Contract Lines</title>
+    <meta charset="UTF-8">
 </head>
 <body>
 <h2>Contract Lines</h2>
+
 <table border="1">
     <tr>
         <th>ID</th>
-        <th>Contract ID</th>
+        <th>Contract</th>
+        <th>Product</th>
+        <th>Unit</th>
+        <th>Quantity</th>
         <th>Description</th>
         <th>Delete</th>
     </tr>
-    <tr th:each="contractline : ${contractlines}">
-        <td th:text="${contractline.id}"></td>
-        <td th:text="${contractline.contract != null ? contractline.contract.id : ''}"></td>
-        <td th:text="${contractline.description}"></td>
+    <tr th:each="cl : ${contractlines}">
+        <td th:text="${cl.id}"></td>
+        <td th:text="${cl.contract != null ? cl.contract.name : ''}"></td>
+        <td th:text="${cl.product != null ? cl.product.name : ''}"></td>
+        <td th:text="${cl.unit != null ? cl.unit.name : ''}"></td>
+        <td th:text="${cl.quantity}"></td>
+        <td th:text="${cl.description}"></td>
         <td>
-            <form th:action="@{'/contractlines/' + ${contractline.id} + '/delete'}" method="post">
+            <form th:action="@{'/contractlines/' + ${cl.id} + '/delete'}" method="post">
                 <button type="submit">Delete</button>
             </form>
         </td>
     </tr>
 </table>
+
 <a th:href="@{/contractlines/new}">Add Contract Line</a>
 </body>
 </html>

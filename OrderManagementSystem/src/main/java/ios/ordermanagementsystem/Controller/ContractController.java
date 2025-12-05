@@ -15,12 +15,12 @@ public class ContractController {
     public List<Contract> getAllContracts() { return service.getAllContracts(); }
 
     @GetMapping("/{id}")
-    public Contract getContract(@PathVariable String id) { return service.getContract(id); }
+    public Contract getContract(@PathVariable Long id) { return service.getContract(id); }
 
     @PostMapping
     public void addContract(@RequestBody Contract contract) { service.addContract(contract); }
 
     @DeleteMapping("/{id}")
-    public void deleteContract(@PathVariable String id) { service.removeContract(id); }
+    public void deleteContract(@PathVariable Long id) { service.removeContract(id); }
 }
 

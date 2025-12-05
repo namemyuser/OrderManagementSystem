@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head><title>Add Contract</title></head>
+<head><title>Add Contract</title><meta charset="UTF-8"></head>
 <body>
 <h2>Add new Contract</h2>
-<form th:action="@{/contracts}" method="post">
-    ID: <input type="text" name="id" /><br/>
-    Name: <input type="text" name="name" /><br/>
-    Status: <input type="text" name="status" /><br/>
+
+<form th:action="@{/contracts}" th:object="${contract}" method="post">
+    <!-- ID is auto-generated, no field needed -->
+
+    Name:
+    <input type="text" th:field="*{name}" required/><br/>
+
+    Type:
+    <select th:field="*{contractType.id}" required>
+        <option value="" disabled selected>Select type</option>
+        <option th:each="ct : ${contractTypes}"
+                th:value="${ct.id}"
+                th:text="${ct.name}">
+        </option>
+    </select><br/>
+
+    Status:
+    <input type="text" th:field="*{status}" placeholder="ACTIVE / DOWN" required/><br/>
+
     <button type="submit">Add</button>
 </form>
+
 <a th:href="@{/contracts}">Back to list</a>
 </body>
 </html>

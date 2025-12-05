@@ -2,51 +2,52 @@ package ios.ordermanagementsystem.Service;
 
 import ios.ordermanagementsystem.Model.Order;
 import ios.ordermanagementsystem.Repository.OrderRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import java.util.List;
 
 @Service
 public class OrderService {
+
     private final OrderRepository orderRepository;
 
-    @Autowired
     public OrderService(OrderRepository orderRepository) {
         this.orderRepository = orderRepository;
     }
 
     /** Standard CRUD methods **/
+
     public List<Order> findAll() {
         return orderRepository.findAll();
     }
 
-    public Order findById(String id) {
-        return orderRepository.findById(id);
+    public Order findById(Long id) {
+        return orderRepository.findById(id).orElse(null);
     }
 
-    public void save(Order order) {
-        orderRepository.save(order);
+    public Order save(Order order) {
+        return orderRepository.save(order);
     }
 
-    public void update(Order order) {
-        orderRepository.update(order);
-    }
-
-    public void deleteById(String id) {
+    public void deleteById(Long id) {
         orderRepository.deleteById(id);
     }
 
-    /** Aliases for legacy code & WebControllers **/
+    /** Aliases for WebControllers **/
 
-    // For listing
-    public List<Order> getAllOrders() { return findAll(); }
+    public List<Order> getAllOrders() {
+        return findAll();
+    }
 
-    // For fetching one order
-    public Order getOrder(String id) { return findById(id); }
+    public Order getOrder(Long id) {
+        return findById(id);
+    }
 
-    // For creating
-    public void addOrder(Order order) { save(order); }
+    public Order addOrder(Order order) {
+        return save(order);
+    }
 
-    // For removing
-    public void removeOrder(String id) { deleteById(id); }
+    public void removeOrder(Long id) {
+        deleteById(id);
+    }
 }

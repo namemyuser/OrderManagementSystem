@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head><title>Add Unit</title></head>
+<head>
+    <title>Add Unit</title>
+    <meta charset="UTF-8">
+</head>
 <body>
 <h2>Add new Unit</h2>
-<form th:action="@{/units}" method="post">
-    ID: <input type="text" name="id" /><br/>
-    Name: <input type="text" name="name" /><br/>
-    Abbreviation: <input type="text" name="abbreviation" /><br/>
+
+<form th:action="@{/units}" th:object="${unit}" method="post">
+    <!-- ID is auto-generated; no input needed -->
+
+    Name:
+    <input type="text" th:field="*{name}" required/><br/>
+
+    Abbreviation:
+    <input type="text" th:field="*{abbreviation}" required/><br/>
+
     <button type="submit">Add</button>
 </form>
+
 <a th:href="@{/units}">Back to list</a>
 </body>
 </html>

@@ -33,7 +33,7 @@ public class UnitOfMeasureWebController {
     }
 
     @PostMapping("/{id}/delete")
-    public String delete(@PathVariable String id) {
+    public String delete(@PathVariable Long id) {
         unitOfMeasureService.removeUnit(id);
         return "redirect:/units";
     }

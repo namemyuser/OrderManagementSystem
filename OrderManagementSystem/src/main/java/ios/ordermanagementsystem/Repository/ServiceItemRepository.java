@@ -1,19 +1,7 @@
 package ios.ordermanagementsystem.Repository;
 
 import ios.ordermanagementsystem.Model.ServiceItem;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.util.List;
-
-public interface ServiceItemRepository {
-
-    List<ServiceItem> findAll();
-
-    ServiceItem findById(String id);
-
-    ServiceItem save(ServiceItem serviceItem);
-
-    void update(ServiceItem serviceItem);
-
-    void deleteById(String id);
-
+public interface ServiceItemRepository extends JpaRepository<ServiceItem, Long> {
 }

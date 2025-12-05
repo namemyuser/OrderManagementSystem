@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 @RequestMapping("/customers")
 public class CustomerWebController {
+
     private final CustomerService customerService;
 
     public CustomerWebController(CustomerService customerService) {
@@ -34,7 +35,7 @@ public class CustomerWebController {
     }
 
     @PostMapping("/{id}/delete")
-    public String delete(@PathVariable String id) {
+    public String delete(@PathVariable Long id) {   // Long to match JPA id
         customerService.removeCustomer(id);
         return "redirect:/customers";
     }

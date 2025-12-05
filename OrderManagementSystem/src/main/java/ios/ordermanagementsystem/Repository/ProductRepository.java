@@ -1,19 +1,7 @@
 package ios.ordermanagementsystem.Repository;
 
 import ios.ordermanagementsystem.Model.Product;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.util.List;
-
-public interface ProductRepository {
-
-    List<Product> findAll();
-
-    Product findById(String id);
-
-    Product save(Product product);
-
-    void update(Product product);
-
-    void deleteById(String id);
-
+public interface ProductRepository extends JpaRepository<Product, Long> {
 }

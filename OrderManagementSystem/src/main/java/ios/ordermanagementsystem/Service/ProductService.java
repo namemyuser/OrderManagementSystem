@@ -3,10 +3,12 @@ package ios.ordermanagementsystem.Service;
 import ios.ordermanagementsystem.Model.Product;
 import ios.ordermanagementsystem.Repository.ProductRepository;
 import org.springframework.stereotype.Service;
+
 import java.util.List;
 
 @Service
 public class ProductService {
+
     private final ProductRepository productRepository;
 
     public ProductService(ProductRepository productRepository) {
@@ -14,13 +16,13 @@ public class ProductService {
     }
 
     // Add a product
-    public void addItem(Product product) {
-        productRepository.save(product);
+    public Product addItem(Product product) {
+        return productRepository.save(product);
     }
 
     // Get a product by ID
-    public Product getItem(String id) {
-        return productRepository.findById(id);
+    public Product getItem(Long id) {
+        return productRepository.findById(id).orElse(null);
     }
 
     // Get all products
@@ -29,7 +31,7 @@ public class ProductService {
     }
 
     // Remove a product by ID
-    public void removeItem(String id) {
+    public void removeItem(Long id) {
         productRepository.deleteById(id);
     }
 }

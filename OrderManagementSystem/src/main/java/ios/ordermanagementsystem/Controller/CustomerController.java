@@ -18,11 +18,11 @@ public class CustomerController {
     public List<Customer> getAllCustomers() { return customerService.getAllCustomers(); }
 
     @GetMapping("/{id}")
-    public Customer getCustomer(@PathVariable String id) { return customerService.getCustomer(id); }
+    public Customer getCustomer(@PathVariable Long id) { return customerService.getCustomer(id); }
 
     @PostMapping
     public void addCustomer(@RequestBody Customer customer) { customerService.addCustomer(customer); }
 
     @DeleteMapping("/{id}")
-    public void deleteCustomer(@PathVariable String id) { customerService.removeCustomer(id); }
+    public void deleteCustomer(@PathVariable Long id) { customerService.removeCustomer(id); }
 }

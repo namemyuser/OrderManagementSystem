@@ -20,7 +20,7 @@ public class ServiceItemController {
     }
 
     @GetMapping("/{id}")
-    public ServiceItem getServiceItem(@PathVariable String id) {
+    public ServiceItem getServiceItem(@PathVariable Long id) {
         return serviceItemService.getItem(id);
     }
 
@@ -30,7 +30,7 @@ public class ServiceItemController {
     }
 
     @DeleteMapping("/{id}")
-    public void deleteServiceItem(@PathVariable String id) {
+    public void deleteServiceItem(@PathVariable Long id) {
         serviceItemService.removeItem(id);
     }
 }

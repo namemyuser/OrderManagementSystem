@@ -2,15 +2,23 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Add Product</title>
+    <meta charset="UTF-8">
 </head>
 <body>
 <h2>Add new Product</h2>
-<form th:action="@{/products}" method="post">
-    ID: <input type="text" name="id" /><br/>
-    Name: <input type="text" name="name" /><br/>
-    Status: <input type="text" name="status" /><br/>
+
+<form th:action="@{/products}" th:object="${product}" method="post">
+    <!-- ID is auto-generated; no input needed -->
+
+    Name:
+    <input type="text" th:field="*{name}" required/><br/>
+
+    Status:
+    <input type="text" th:field="*{status}" placeholder="ACTIVE / DOWN" required/><br/>
+
     <button type="submit">Add</button>
 </form>
+
 <a th:href="@{/products}">Back to list</a>
 </body>
 </html>

@@ -1,19 +1,7 @@
 package ios.ordermanagementsystem.Repository;
 
 import ios.ordermanagementsystem.Model.OrderLine;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.util.List;
-
-public interface OrderLineRepository {
-
-    List<OrderLine> findAll();
-
-    OrderLine findById(String id);
-
-    OrderLine save(OrderLine orderLine);
-
-    void update(OrderLine orderLine);
-
-    void deleteById(String id);
-
+public interface OrderLineRepository extends JpaRepository<OrderLine, Long> {
 }

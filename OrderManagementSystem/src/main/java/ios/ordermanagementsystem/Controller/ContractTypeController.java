@@ -20,7 +20,7 @@ public class ContractTypeController {
     }
 
     @GetMapping("/{id}")
-    public ContractType getContractType(@PathVariable String id) {
+    public ContractType getContractType(@PathVariable Long id) {
         return contractTypeService.getContractType(id);
     }
 
@@ -30,7 +30,7 @@ public class ContractTypeController {
     }
 
     @DeleteMapping("/{id}")
-    public void deleteContractType(@PathVariable String id) {
+    public void deleteContractType(@PathVariable Long id) {
         contractTypeService.removeContractType(id);
     }
 }

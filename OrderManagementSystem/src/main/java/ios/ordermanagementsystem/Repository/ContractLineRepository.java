@@ -1,20 +1,7 @@
 package ios.ordermanagementsystem.Repository;
 
 import ios.ordermanagementsystem.Model.ContractLine;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.util.List;
-
-public interface ContractLineRepository {
-
-    List<ContractLine> findAll();
-
-    ContractLine findById(String id);
-
-    ContractLine save(ContractLine contractLine);
-
-    void update(ContractLine contractLine);
-
-    void deleteById(String id);
-
-    void delete(String id);
+public interface ContractLineRepository extends JpaRepository<ContractLine, Long> {
 }

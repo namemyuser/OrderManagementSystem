@@ -1,23 +1,45 @@
 package ios.ordermanagementsystem.Model;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "contract_types")
 public class ContractType {
-    private String id;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     private String name;
+
     private String type;
 
-    public ContractType(String id, String name, String type) {
-        this.id = id;
+    public ContractType() {
+    }
+
+    public ContractType(String name, String type) {
         this.name = name;
         this.type = type;
     }
-    public ContractType() {}
 
-    public String getId() { return id; }
-    public void setId(String id) { this.id = id; }
+    public Long getId() {
+        return id;
+    }
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
 
-    public String getType() { return type; }
-    public void setType(String type) { this.type = type; }
+    public String getType() {
+        return type;
+    }
+    public void setType(String type) {
+        this.type = type;
+    }
 }

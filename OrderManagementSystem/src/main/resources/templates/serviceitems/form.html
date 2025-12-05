@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head><title>Add Service Item</title></head>
+<head>
+    <title>Add Service Item</title>
+    <meta charset="UTF-8">
+</head>
 <body>
 <h2>Add new Service Item</h2>
-<form th:action="@{/serviceitems}" method="post">
-    ID: <input type="text" name="id" /><br/>
-    Name: <input type="text" name="name" /><br/>
-    Description: <input type="text" name="description" /><br/>
+
+<form th:action="@{/serviceitems}" th:object="${serviceitem}" method="post">
+    <!-- ID is auto-generated in the database, no input needed -->
+
+    Name:
+    <input type="text" th:field="*{name}" required/><br/>
+
+    Description:
+    <input type="text" th:field="*{description}" required/><br/>
+
     <button type="submit">Add</button>
 </form>
+
 <a th:href="@{/serviceitems}">Back to list</a>
 </body>
 </html>

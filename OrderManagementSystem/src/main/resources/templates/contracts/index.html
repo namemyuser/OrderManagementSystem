@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head><title>Contracts</title></head>
+<head><title>Contracts</title><meta charset="UTF-8"></head>
 <body>
 <h2>Contracts</h2>
-<table>
-    <tr><th>ID</th><th>Name</th><th>Status</th><th>Delete</th></tr>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Status</th>
+        <th>Delete</th>
+    </tr>
     <tr th:each="contract : ${contracts}">
         <td th:text="${contract.id}"></td>
         <td th:text="${contract.name}"></td>
+        <td th:text="${contract.contractType != null ? contract.contractType.name : ''}"></td>
         <td th:text="${contract.status}"></td>
         <td>
             <form th:action="@{'/contracts/' + ${contract.id} + '/delete'}" method="post">

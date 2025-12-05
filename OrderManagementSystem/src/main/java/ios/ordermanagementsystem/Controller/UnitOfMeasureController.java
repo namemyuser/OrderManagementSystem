@@ -15,12 +15,12 @@ public class UnitOfMeasureController {
     public List<UnitOfMeasure> getAllUnits() { return service.getAllUnits(); }
 
     @GetMapping("/{id}")
-    public UnitOfMeasure getUnit(@PathVariable String id) { return service.getUnit(id); }
+    public UnitOfMeasure getUnit(@PathVariable Long id) { return service.getUnit(id); }
 
     @PostMapping
     public void addUnit(@RequestBody UnitOfMeasure unit) { service.addUnit(unit); }
 
     @DeleteMapping("/{id}")
-    public void deleteUnit(@PathVariable String id) { service.removeUnit(id); }
+    public void deleteUnit(@PathVariable Long id) { service.removeUnit(id); }
 }
 

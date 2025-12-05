@@ -3,6 +3,8 @@ package ios.ordermanagementsystem.Service;
 import ios.ordermanagementsystem.Model.SellableItem;
 import ios.ordermanagementsystem.Model.Product;
 import ios.ordermanagementsystem.Model.ServiceItem;
+import ios.ordermanagementsystem.Repository.ProductRepository;
+import ios.ordermanagementsystem.Repository.ServiceItemRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -11,24 +13,21 @@ import java.util.List;
 @Service
 public class SellableItemService {
 
-    private final ProductService productService;
-    private final ServiceItemService serviceItemService;
+    private final ProductRepository productRepository;
+    private final ServiceItemRepository serviceItemRepository;
 
-    public SellableItemService(ProductService productService,
-                               ServiceItemService serviceItemService) {
-        this.productService = productService;
-        this.serviceItemService = serviceItemService;
+    public SellableItemService(ProductRepository productRepository,
+                               ServiceItemRepository serviceItemRepository) {
+        this.productRepository = productRepository;
+        this.serviceItemRepository = serviceItemRepository;
     }
 
-    /**
-     * Returns all sellable items (products + service items) in one list.
-     */
     public List<SellableItem> getAllItems() {
-        List<SellableItem> result = new ArrayList<>();
-        List<Product> products = productService.getAllItems();
-        List<ServiceItem> services = serviceItemService.getAllItems();
-        result.addAll(products);
-        result.addAll(services);
-        return result;
+        List<SellableItem> items = new ArrayList<>();
+        List<Product> products = productRepository.findAll();
+        List<ServiceItem> services = serviceItemRepository.findAll();
+        items.addAll(products);
+        items.addAll(services);
+        return items;
     }
 }

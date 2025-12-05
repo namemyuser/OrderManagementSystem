@@ -31,7 +31,7 @@ public class ServiceItemWebController {
     }
 
     @PostMapping("/{id}/delete")
-    public String delete(@PathVariable String id) {
+    public String delete(@PathVariable Long id) {
         serviceItemService.removeItem(id);
         return "redirect:/serviceitems";
     }
